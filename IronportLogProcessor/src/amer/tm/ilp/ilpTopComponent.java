@@ -407,7 +407,7 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
 
     class processWorker extends SwingWorker<Void, Void> {
 
-        int recordcount = 0;
+//        int recordcount = 0;
 
         @Override
         protected Void doInBackground() throws Exception {
@@ -417,8 +417,8 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
             proBar.setIndeterminate(true);
 
             CommonHelper.log("start", false);
-            countentry();
-            CommonHelper.log("done line count: " + recordcount, false);
+//            countentry();
+//            CommonHelper.log("done line count: " + recordcount, false);
             proBar.setVisible(false);
 
             // prep the writer
@@ -435,8 +435,8 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
                 return null;
             }
 
-            proBar = new JProgressBar(1, recordcount);
-            proBar.setStringPainted(true);
+//            proBar = new JProgressBar(1, recordcount);
+//            proBar.setStringPainted(true);
 
             // prep the table
             ArrayList<String> type = new ArrayList<>();
@@ -452,7 +452,7 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
                             break;
                         }
                         counter++;
-                        proBar.setValue(counter);
+//                        proBar.setValue(counter);
                         String line = sc.nextLine();
                         LogLineProcessor llp = new LogLineProcessor(line, expectedsender);
 
@@ -533,16 +533,19 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
             return null;
         }
 
-        private void countentry() {
-            for (File f : inputfiles) {
-                Path p = Paths.get(f.getAbsolutePath());
-                try {
-                    recordcount += Files.lines(p).count();
-                } catch (IOException e) {
-                    CommonHelper.logStack(e);
-                }
-            }
-        }
+//        private void countentry() {
+//            recordcount = 0;
+//            for (File f : inputfiles) {
+//                CommonHelper.log("counting line: " + f.getName(), false);
+//                Path p = Paths.get(f.getAbsolutePath());
+//                try {
+//                    recordcount += Files.lines(p).count();
+//                } catch (IOException e) {
+//                    CommonHelper.logStack(e);
+//                }
+//                
+//            }
+//        }
 
     }
 }

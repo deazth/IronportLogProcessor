@@ -122,7 +122,7 @@ public class ErrMapModel extends AbstractTableModel{
     }
     
     public void saveToFile(){
-        File inf = new File("../err_map.txt");
+        File inf = new File("err_map.txt");
         try {
             if(!inf.canWrite()){
                 CommonHelper.PopMsg("No write access to mapping file", "Error?", JOptionPane.ERROR_MESSAGE);
@@ -155,7 +155,7 @@ public class ErrMapModel extends AbstractTableModel{
     
     public void loadFromFile(){
         // check for input file
-        File inf = new File("../err_map.txt");
+        File inf = new File("err_map.txt");
         if(!inf.isFile()){
             CommonHelper.PopMsg("Error mapping file does not exist", "Missing input", JOptionPane.ERROR_MESSAGE);
             try {

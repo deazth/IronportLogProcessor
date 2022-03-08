@@ -1,0 +1,15 @@
+mailbox full|over quota
+email doesn't exist|email account that you tried to reach does not exist
+connection issue|connection lost
+email doesn't exist|mailbox is disabled
+email doesn't exist|mailbox not found
+email doesn't exist|user unknown
+invalid domain|dns hard error looking up
+bad email|the user you are trying to contact is receiving mail at a rate that
+timeout|timeout
+bad email|the user you are trying to contact is receiving mail at a rate that
+invalid domain|dns soft error looking up
+email doesn't exist|no such user here
+email doesn't exist|mailbox unavailable
+email doesn't exist|the mail server could not deliver mail
+email doesn't exist|user does not exist

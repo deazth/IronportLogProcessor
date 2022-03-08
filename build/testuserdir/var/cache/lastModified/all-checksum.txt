@@ -1,0 +1,9 @@
+E:\Program\NetBeans-12.4\netbeans\platform=1621001308000
+cluster.E:/Code/java/IronportLogProcessor/build/cluster=1646744674304
+cluster.E:/Program/NetBeans-12.4/netbeans/platform=1621001308000
+user=1646744674304
+crc=7
+locale=en_MY
+branding=ironportlogprocessor
+java.version=1.8.0_291
+java.vm.version=25.291-b10

@@ -46,8 +46,8 @@ import org.openide.util.NbBundle.Messages;
         preferredID = "ilpTopComponent"
 )
 @Messages({
-    "CTL_ilpAction=ilp",
-    "CTL_ilpTopComponent=ilp Window",
+    "CTL_ilpAction=Log Processor",
+    "CTL_ilpTopComponent=Log Processor",
     "HINT_ilpTopComponent=This is a ilp window"
 })
 public final class ilpTopComponent extends TopComponent implements PropertyChangeListener {
@@ -412,6 +412,8 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
         @Override
         protected Void doInBackground() throws Exception {
             String expectedsender = txtSender.getText().toLowerCase();
+            ErrMapModel emm = new ErrMapModel();
+            emm.loadFromFile();
             proBar.setVisible(true);
             disableBtn();
             proBar.setIndeterminate(true);
@@ -456,7 +458,7 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
                         String line = sc.nextLine();
                         LogLineProcessor llp = new LogLineProcessor(line, expectedsender);
 
-                        if (llp.process()) {
+                        if (llp.process(emm)) {
                             try {
                                 if (llp.mappederr.equals("Others")) {
                                     writer.write(
@@ -466,6 +468,7 @@ public final class ilpTopComponent extends TopComponent implements PropertyChang
                                             + llp.time + ";"
                                             + llp.fullerr
                                     );
+                                    CommonHelper.log(llp.email + " Unmapped: " + llp.fullerr, false);
 
                                 } else {
                                     writer.write(

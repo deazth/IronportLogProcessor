@@ -13,7 +13,7 @@ public class LogLineProcessor {
     
     private String data;
     public String time;
-    public String errtype;
+//    public String errtype;
     public String bano;
     public String email;
     public String mappederr;
@@ -25,7 +25,7 @@ public class LogLineProcessor {
         this.expectedSender = sender;
     }
     
-    public boolean process(){
+    public boolean process(ErrMapModel emm){
         // first get the time
         int pos = data.indexOf(" Info: ");
         if(pos == -1){
@@ -63,14 +63,22 @@ public class LogLineProcessor {
         
         // get the assigned error msg
         data = data.substring(pos + 10);
-        pos = data.indexOf("(");
-        errtype = data.substring(0, pos).trim();
+//        pos = data.indexOf("(");
+//        errtype = data.substring(0, pos).trim();
         
         // get the full error msg
-        data = data.substring(pos);
+//        data = data.substring(pos);
         pos = data.indexOf("Message:");
-        fullerr = data.substring(0, pos).replaceAll(";", "");
-        map();
+        String errline = data.substring(0, pos).replaceAll(";", "");
+        
+        mappederr = emm.parseLogString(errline);
+        
+        if(mappederr.equals("Others")){
+            fullerr = errline;
+        } else {
+            fullerr = "";
+        }
+//        map();
         
         // get the bano
         bano = "";
@@ -102,22 +110,19 @@ public class LogLineProcessor {
         return true;
     }
     
-    private void map(){
-        
-        if(errtype.equals("5.3.0 - Other mail system problem")){
-            mappederr = "Email doesnt exist";
-        } else if(errtype.equals("5.1.0 - Unknown address error")) {
-            mappederr = "Email doesnt exist";
-        } else if(errtype.equals("5.1.2 - Bad destination host")) {
-            mappederr = "Invalid domain";
-        } else if(errtype.equals("5.4.7 - Delivery expired")) {
-            mappederr = "Mailbox full or timeout";
-        } else {
-            mappederr = "Others";
-        }
-        
-        
-        
-        
-    }
+//    private void map(){
+//        
+//        if(errtype.equals("5.3.0 - Other mail system problem")){
+//            mappederr = "Email doesnt exist";
+//        } else if(errtype.equals("5.1.0 - Unknown address error")) {
+//            mappederr = "Email doesnt exist";
+//        } else if(errtype.equals("5.1.2 - Bad destination host")) {
+//            mappederr = "Invalid domain";
+//        } else if(errtype.equals("5.4.7 - Delivery expired")) {
+//            mappederr = "Mailbox full or timeout";
+//        } else {
+//            mappederr = "Others";
+//        }
+//        
+//    }
 }

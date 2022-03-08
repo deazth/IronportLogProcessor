@@ -7,6 +7,7 @@ package amer.tm.ilp;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import org.netbeans.api.io.IOProvider;
 import org.netbeans.api.io.InputOutput;
 
@@ -45,5 +46,10 @@ public class CommonHelper {
         SimpleDateFormat sdf = new SimpleDateFormat(date_format);
 
         return sdf.format(d);
+    }
+    
+    public static void PopMsg(String errmsg, String title, int msgtype){
+        log(errmsg, msgtype == JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, errmsg, title, msgtype);
     }
 }

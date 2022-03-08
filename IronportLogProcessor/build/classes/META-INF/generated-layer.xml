@@ -3,13 +3,13 @@
     <folder name="xml">
         <folder name="entities">
             <folder name="amer_tm_ilp">
-                <file name="ilp" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
-                    <!--amer.tm.ilp.ilpTopComponent-->
-                    <attr name="hint.originalPublicID" stringvalue="-//amer.tm.ilp//ilp//EN"/>
-                </file>
                 <file name="ErrMap" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--amer.tm.ilp.ErrMapTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//amer.tm.ilp//ErrMap//EN"/>
+                </file>
+                <file name="ilp" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--amer.tm.ilp.ilpTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//amer.tm.ilp//ilp//EN"/>
                 </file>
             </folder>
         </folder>
@@ -17,13 +17,13 @@
             <folder name="amer">
                 <folder name="tm">
                     <folder name="ilp">
-                        <file name="ilpTopComponent">
-                            <!--amer.tm.ilp.ilpTopComponent-->
-                            <attr name="settings.providerPath" stringvalue="xml/lookups//amer_tm_ilp/ilp.instance"/>
-                        </file>
                         <file name="ErrMapTopComponent">
                             <!--amer.tm.ilp.ErrMapTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//amer_tm_ilp/ErrMap.instance"/>
+                        </file>
+                        <file name="ilpTopComponent">
+                            <!--amer.tm.ilp.ilpTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//amer_tm_ilp/ilp.instance"/>
                         </file>
                     </folder>
                 </folder>
@@ -31,14 +31,6 @@
         </folder>
         <folder name="lookups">
             <folder name="amer_tm_ilp">
-                <file name="ilp.instance">
-                    <!--amer.tm.ilp.ilpTopComponent-->
-                    <attr methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
-                    <attr methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
-                    <attr name="settings.instanceClass" stringvalue="amer.tm.ilp.ilpTopComponent"/>
-                    <attr name="settings.instanceOf" stringvalue="amer.tm.ilp.ilpTopComponent"/>
-                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
-                </file>
                 <file name="ErrMap.instance">
                     <!--amer.tm.ilp.ErrMapTopComponent-->
                     <attr methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
@@ -47,30 +39,31 @@
                     <attr name="settings.instanceOf" stringvalue="amer.tm.ilp.ErrMapTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
+                <file name="ilp.instance">
+                    <!--amer.tm.ilp.ilpTopComponent-->
+                    <attr methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="amer.tm.ilp.ilpTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="amer.tm.ilp.ilpTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
             </folder>
         </folder>
     </folder>
     <folder name="Menu">
         <folder name="Window">
-            <file name="amer-tm-ilp-ilpTopComponent.shadow">
-                <!--amer.tm.ilp.ilpTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/amer-tm-ilp-ilpTopComponent.instance"/>
-            </file>
             <file name="amer-tm-ilp-ErrMapTopComponent.shadow">
                 <!--amer.tm.ilp.ErrMapTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/Window/amer-tm-ilp-ErrMapTopComponent.instance"/>
+            </file>
+            <file name="amer-tm-ilp-ilpTopComponent.shadow">
+                <!--amer.tm.ilp.ilpTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/amer-tm-ilp-ilpTopComponent.instance"/>
             </file>
         </folder>
     </folder>
     <folder name="Windows2">
         <folder name="Components">
-            <file name="ilpTopComponent.settings">
-                <!--amer.tm.ilp.ilpTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="amer.tm.ilp.ilpTopComponent"/>
-</settings>
-]]></file>
             <file name="ErrMapTopComponent.settings">
                 <!--amer.tm.ilp.ErrMapTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
@@ -78,17 +71,16 @@
   <instance class="amer.tm.ilp.ErrMapTopComponent"/>
 </settings>
 ]]></file>
+            <file name="ilpTopComponent.settings">
+                <!--amer.tm.ilp.ilpTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="amer.tm.ilp.ilpTopComponent"/>
+</settings>
+]]></file>
         </folder>
         <folder name="Modes">
             <folder name="editor">
-                <file name="ilpTopComponent.wstcref">
-                    <!--amer.tm.ilp.ilpTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ilpTopComponent"/>
-  <state opened="true"/>
-</tc-ref>
-]]></file>
                 <file name="ErrMapTopComponent.wstcref">
                     <!--amer.tm.ilp.ErrMapTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
@@ -97,24 +89,32 @@
   <state opened="false"/>
 </tc-ref>
 ]]></file>
+                <file name="ilpTopComponent.wstcref">
+                    <!--amer.tm.ilp.ilpTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ilpTopComponent"/>
+  <state opened="true"/>
+</tc-ref>
+]]></file>
             </folder>
         </folder>
     </folder>
     <folder name="Actions">
         <folder name="Window">
-            <file name="amer-tm-ilp-ilpTopComponent.instance">
-                <!--amer.tm.ilp.ilpTopComponent-->
-                <attr methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="amer.tm.ilp.ilpTopComponent"/>
-                <attr name="preferredID" stringvalue="ilpTopComponent"/>
-                <attr bundlevalue="amer.tm.ilp.Bundle#CTL_ilpAction" name="displayName"/>
-            </file>
             <file name="amer-tm-ilp-ErrMapTopComponent.instance">
                 <!--amer.tm.ilp.ErrMapTopComponent-->
                 <attr methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
                 <attr name="component" newvalue="amer.tm.ilp.ErrMapTopComponent"/>
                 <attr name="preferredID" stringvalue="ErrMapTopComponent"/>
                 <attr bundlevalue="amer.tm.ilp.Bundle#CTL_ErrMapAction" name="displayName"/>
+            </file>
+            <file name="amer-tm-ilp-ilpTopComponent.instance">
+                <!--amer.tm.ilp.ilpTopComponent-->
+                <attr methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="amer.tm.ilp.ilpTopComponent"/>
+                <attr name="preferredID" stringvalue="ilpTopComponent"/>
+                <attr bundlevalue="amer.tm.ilp.Bundle#CTL_ilpAction" name="displayName"/>
             </file>
         </folder>
     </folder>

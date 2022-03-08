@@ -2,7 +2,7 @@ package amer.tm.ilp;
 /** Localizable strings for {@link amer.tm.ilp}. */
 class Bundle {
     /**
-     * @return <i>ErrMap</i>
+     * @return <i>Error Mappings</i>
      * @see ErrMapTopComponent
      */
     static String CTL_ErrMapAction() {

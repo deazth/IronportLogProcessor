@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><module codename="amer.tm.ilp">
-    <module_version install_time="1646744674210" last="true" origin="installer" specification_version="1.0">
-        <file crc="4229836760" name="config/Modules/amer-tm-ilp.xml"/>
-        <file crc="85328036" name="modules/amer-tm-ilp.jar"/>
-    </module_version>
-</module>

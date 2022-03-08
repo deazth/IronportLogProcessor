@@ -33,7 +33,7 @@ import org.openide.util.NbBundle.Messages;
         preferredID = "ErrMapTopComponent"
 )
 @Messages({
-    "CTL_ErrMapAction=ErrMap",
+    "CTL_ErrMapAction=Error Mappings",
     "CTL_ErrMapTopComponent=Error Mappings",
     "HINT_ErrMapTopComponent=This is a ErrMap window"
 })
